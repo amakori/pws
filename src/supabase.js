@@ -144,7 +144,7 @@ export function subscribeToLockerCommands(onChange) {
 /**
  * Triggers the core door cycle:
  * 1. Sets door_id to 7 in public.locker_commands
- * 2. Runs 10s countdown timer
+ * 2. Runs 5s countdown timer
  * 3. Sets door_id to 8 in the same row
  */
 export async function runDoorCycle({
@@ -230,8 +230,8 @@ export async function runDoorCycle({
       onDoor7({ rowId: targetRowId, doorId: 7 });
     }
 
-    // --- STEP 2: 10-second countdown timer ---
-    const TOTAL_DURATION_MS = 10000;
+    // --- STEP 2: 5-second countdown timer ---
+    const TOTAL_DURATION_MS = 5000;
     const INTERVAL_MS = 100;
     const startTime = Date.now();
 

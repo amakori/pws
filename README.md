@@ -1,7 +1,7 @@
 # Locker Door Controller PWA 🚪⚡
 
 A Progressive Web App (PWA) that connects directly to Supabase to trigger locker door state transitions.
-Pressing the single tactile action button sets `door_id = 7`, initiates a 10-second countdown with visual/haptic feedback, and automatically updates `door_id = 8`.
+Pressing the single tactile action button sets `door_id = 7`, initiates a 5-second countdown with visual/haptic feedback, and automatically updates `door_id = 8`.
 
 ---
 
@@ -93,11 +93,11 @@ alter publication supabase_realtime add table public.locker_commands;
    - Depending on the selected mode (*Insert New Command* or *Update Latest Row*), sets `door_id = 7`.
    - The button transitions to active amber state with pulse glow.
    - Haptic feedback is triggered on supported mobile devices.
-2. **10-Second Countdown**:
-   - The circular SVG progress ring animates smoothly down from 10.0s to 0.0s.
+2. **5-Second Countdown**:
+   - The circular SVG progress ring animates smoothly down from 5.0s to 0.0s.
    - Displays real-time countdown digits and target row ID.
 3. **Transition to Door 8**:
-   - At exactly 10 seconds, the app updates that row's `door_id = 8` and marks `processed = true`.
+   - At exactly 5 seconds, the app updates that row's `door_id = 8` and marks `processed = true`.
    - The button pulses green with celebration confetti and haptic buzz.
    - The live activity feed automatically updates.
    - After 3 seconds, the button resets to the ready state.

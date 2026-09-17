@@ -182,7 +182,7 @@ async function handleTriggerClick() {
 
   resetCountdownRing();
   timerDisplay.classList.remove('hidden');
-  timerCountdown.textContent = '10.0s';
+  timerCountdown.textContent = '5.0s';
 
   await runDoorCycle({
     mode,
@@ -193,9 +193,9 @@ async function handleTriggerClick() {
       cyclePhase.textContent = 'DOOR 7 ACTIVE';
       cyclePhase.className = 'hud-value status-running';
 
-      btnLabel.textContent = 'HOLDING 10s';
+      btnLabel.textContent = 'HOLDING 5s';
       btnSubtext.textContent = `ROW #${rowId} • DOOR ID: 7`;
-      statusMessage.textContent = `Door 7 active for row #${rowId}. Waiting 10s before switching to 8...`;
+      statusMessage.textContent = `Door 7 active for row #${rowId}. Waiting 5s before switching to 8...`;
       triggerHaptic('medium');
     },
 
@@ -231,7 +231,7 @@ async function handleTriggerClick() {
         triggerBtn.className = 'big-action-button';
         triggerBtn.disabled = false;
         btnLabel.textContent = 'START CYCLE';
-        btnSubtext.textContent = 'DOOR 7 ➔ 10s ➔ DOOR 8';
+        btnSubtext.textContent = 'DOOR 7 ➔ 5s ➔ DOOR 8';
         statusMessage.textContent = 'Ready for next cycle';
         statusMessage.style.color = 'var(--text-secondary)';
         isCycleRunning = false;

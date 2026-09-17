@@ -1,7 +1,7 @@
 {
   "name": "Locker Door Controller",
   "short_name": "LockerPWA",
-  "description": "Trigger Supabase locker door state transitions (Door 7 -> 10s timer -> Door 8)",
+  "description": "Trigger Supabase locker door state transitions (Door 7 -> 5s timer -> Door 8)",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
